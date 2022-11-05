@@ -1,0 +1,9 @@
+**/*.vscode
+**/*.exe
+**/Dependencies
+**/x64
+**/.vs
+**/*.vcxproj
+**/*.vcxproj.filters
+**/*.vcxproj.user
+**/*.sln
