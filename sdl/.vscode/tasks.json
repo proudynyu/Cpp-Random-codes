@@ -1,0 +1,31 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "clang++ build active file",
+			"command": "/usr/bin/clang++",
+			"args": [
+				"-fcolor-diagnostics",
+				"-fansi-escape-codes",
+				"-std=c++20",
+				"-o",
+				"../build/${fileBasenameNoExtension}",
+				"-g",
+				"${fileDirname}/*.cpp",
+				"-I/usr/include/SDL2",              
+				"-I/usr/include/SDL2/SDL_image.h",              
+        "-lSDL2",
+				"-lSDL2_image"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/clang++"
+		}
+	]
+}
