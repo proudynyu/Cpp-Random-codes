@@ -6,6 +6,9 @@
 #include <SDL2/SDL_image.h>
 #include <iostream>
 
+const int WINDOW_WIDTH = 800;
+const int WINDOW_HEIGHT = 600;
+
 class Game
 {
 public:
