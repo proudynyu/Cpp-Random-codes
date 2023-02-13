@@ -3,16 +3,15 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "clang++ build active file",
+			"label": "my_run",
 			"command": "/usr/bin/clang++",
 			"args": [
 				"-fcolor-diagnostics",
 				"-fansi-escape-codes",
-				"-std=c++20",
 				"-o",
-				"../build/${fileBasenameNoExtension}",
+				"${workspaceFolder}/build/${fileBasenameNoExtension}",
 				"-g",
-				"${fileDirname}/*.cpp",
+				"${workspaceFolder}/src/*.cpp",
 				"-I/usr/include/SDL2",              
 				"-I/usr/include/SDL2/SDL_image.h",              
         "-lSDL2",
