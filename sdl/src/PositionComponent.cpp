@@ -1,6 +1,8 @@
 #include "PositionComponent.hpp"
 
 /* ================ Position Component ============== */
+
+
 int PositionComponent::x()
 {
   return xpos;

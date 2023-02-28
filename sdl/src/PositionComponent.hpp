@@ -17,4 +17,7 @@ public:
   void init() override;
   void update() override;
   void setPosition(int x, int y);
+
+  PositionComponent() {};
+  ~PositionComponent() override = default;
 };

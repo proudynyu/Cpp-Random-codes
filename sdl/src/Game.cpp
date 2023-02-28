@@ -50,8 +50,6 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
 
   player = new GameObject("assets/human_f.png", 0, 0);
   map = new Map();
-
-  newPlayer.addComponent<PositionComponent>();
 };
 
 void Game::handleEvents()
