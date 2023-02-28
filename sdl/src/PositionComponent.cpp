@@ -1,4 +1,4 @@
-#include "Components.hpp"
+#include "PositionComponent.hpp"
 
 /* ================ Position Component ============== */
 int PositionComponent::x()
@@ -10,6 +10,17 @@ int PositionComponent::y()
 {
   return ypos;
 };
+
+void PositionComponent::x(int x)
+{
+  xpos = x;
+};
+
+void PositionComponent::y(int y)
+{
+  ypos = y;
+};
+
 
 void PositionComponent::init()
 {

@@ -6,6 +6,12 @@
 #include <SDL2/SDL_image.h>
 #include <iostream>
 
+#include "TextureManager.hpp"
+#include "GameObject.hpp"
+#include "Map.hpp"
+#include "ECS.hpp"
+#include "Components.hpp"
+
 const int WINDOW_WIDTH = 800;
 const int WINDOW_HEIGHT = 600;
 

@@ -1,9 +1,4 @@
 #include "Game.hpp"
-#include "TextureManager.hpp"
-#include "GameObject.hpp"
-#include "Map.hpp"
-#include "ECS.hpp"
-#include "Components.hpp"
 
 GameObject *player;
 Map *map;
@@ -11,7 +6,7 @@ Map *map;
 SDL_Renderer *Game::renderer = nullptr;
 
 Manager manager;
-auto& newPlayer(manager.addEntity());
+auto &newPlayer(manager.addEntity());
 
 Game::Game(){};
 
@@ -57,7 +52,6 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
   map = new Map();
 
   newPlayer.addComponent<PositionComponent>();
-
 };
 
 void Game::handleEvents()
@@ -79,6 +73,7 @@ void Game::handleEvents()
 void Game::update()
 {
   player->Update();
+  manager.refresh();
   manager.update();
 };
 
@@ -87,6 +82,7 @@ void Game::render()
   SDL_RenderClear(renderer);
 
   map->DrawMap();
+  manager.draw();
   player->Render();
 
   SDL_RenderPresent(renderer);
